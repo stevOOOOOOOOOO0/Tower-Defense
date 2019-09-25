@@ -13,11 +13,12 @@ public class EnemyBehaviour : MonoBehaviour
 	{
 		agent = GetComponent<NavMeshAgent>();
 		agent.SetDestination(finalDestination.position);
-		agent.speed = PlaySpeed.Value;
+		agent.speed = 3;
+		ChangeSpeed();
 	}
 
 	public void ChangeSpeed()
 	{
-		agent.speed = PlaySpeed.Value;
+		Time.timeScale = PlaySpeed.Value;
 	}
 }
