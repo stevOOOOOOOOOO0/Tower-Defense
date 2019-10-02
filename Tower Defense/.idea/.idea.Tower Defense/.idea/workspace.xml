@@ -13,6 +13,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FloatData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -28,6 +29,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -88,6 +90,7 @@
       <workItem from="1568392391808" duration="2684000" />
       <workItem from="1568660677290" duration="635000" />
       <workItem from="1568835201043" duration="5035000" />
+      <workItem from="1570044748008" duration="4457000" />
     </task>
     <servers />
   </component>
