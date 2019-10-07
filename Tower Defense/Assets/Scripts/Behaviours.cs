@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,44 +10,33 @@ public class Behaviours : MonoBehaviour
 {
 
 	public float WaitTime;
-	public bool Runner = true;
-	public float Smooth = 1f;
+	public bool Runner = false;
 	public List<Transform> Targets;
-	private Rigidbody Character;
-	public UnityEvent StayAction, TriggerEnterAction, TriggerExitAction;
 	public GameObject newObject;
-
-	public void Start()
-	{
-		Character = GetComponent<Rigidbody>();
-	}
-	
-	public void FaceTowards(Transform Target)
-	{
-		Character.MoveRotation(Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Target.position), Smooth));
-	}
+	//public Quaternion lookDirection;
 
 	private void OnTriggerEnter(Collider other)
 	{
 		Targets.Add(other.transform);
-		TriggerEnterAction.Invoke();
-	}
-	
-	/*private void OnTriggerStay(Collider other)
-	{
-		FaceTowards(Targets[0]);
-		StayAction.Invoke();
-	}*/
-
-	private void OnTriggerExit(Collider other)
-	{
-		Targets.Remove(other.transform);
-		TriggerExitAction.Invoke();
 	}
 
-	public void RunCoroutine()
+	public void RemoveTarget()
 	{
-		StartCoroutine(BulletCreation());
+		Targets.Remove(Targets[0]);
+		if (Targets.Count == 0)
+		{
+			Runner = false;
+		}
+	}
+
+	public void RunCoroutines()
+	{
+		if (!Runner)
+		{
+			Runner = true;
+			StartCoroutine(FaceTowards());
+			//StartCoroutine(BulletCreation());
+		}
 	}
 
 	public void StopCoroutine()
@@ -53,11 +44,22 @@ public class Behaviours : MonoBehaviour
 		Runner = false;
 	}
 	
-	public IEnumerator BulletCreation () {
+	public IEnumerator BulletCreation ()
+	{
+		Debug.Log("starting the bullet Coroutine");
 		while (Runner)
 		{
 			Instantiate(newObject);
 			yield return new WaitForSeconds(WaitTime);
+		}
+	}
+	
+	public IEnumerator FaceTowards() {
+		yield return new WaitForSeconds(.1f);
+		while (Runner)
+		{
+			transform.LookAt(Targets[0], Vector3.up);
+			yield return new WaitForSeconds(0);
 		}
 	}
 }

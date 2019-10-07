@@ -6,12 +6,28 @@ using UnityEngine.Events;
 
 public class TriggerBehaviour : MonoBehaviour
 {
-
-	public UnityEvent<Collider> EventWithCollider;
 	
-	public UnityEvent TriggerEvent;
-	private void OnTriggerStay(Collider other)
+	public List<Transform> Targets;
+	
+	public UnityEvent StayAction, TriggerEnterAction, TriggerExitAction;
+	
+	private void OnTriggerEnter()
 	{
-		EventWithCollider.Invoke(other);
+		TriggerEnterAction.Invoke();
+	}
+	
+	private void OnTriggerStay()
+	{
+		StayAction.Invoke();
+	}
+	
+	private void OnTriggerExit()
+	{
+		TriggerExitAction.Invoke();
+	}
+	
+	public void AddTarget(Collider other)
+	{
+		Targets.Add(other.transform);
 	}
 }
