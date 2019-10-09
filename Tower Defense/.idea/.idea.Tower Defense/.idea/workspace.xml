@@ -27,9 +27,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/FloatData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameActionHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BulletBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Behaviours.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -92,6 +92,7 @@
       <workItem from="1568835201043" duration="5035000" />
       <workItem from="1570044748008" duration="4457000" />
       <workItem from="1570474499037" duration="6617000" />
+      <workItem from="1570648851979" duration="5564000" />
     </task>
     <servers />
   </component>

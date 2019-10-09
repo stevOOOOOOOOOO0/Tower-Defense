@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Behaviours : MonoBehaviour
 {
@@ -35,7 +31,7 @@ public class Behaviours : MonoBehaviour
 		{
 			Runner = true;
 			StartCoroutine(FaceTowards());
-			//StartCoroutine(BulletCreation());
+			StartCoroutine(BulletCreation());
 		}
 	}
 
@@ -46,10 +42,10 @@ public class Behaviours : MonoBehaviour
 	
 	public IEnumerator BulletCreation ()
 	{
-		Debug.Log("starting the bullet Coroutine");
+		yield return new WaitForSeconds(.15f);
 		while (Runner)
 		{
-			Instantiate(newObject);
+			Instantiate(newObject, transform.forward * 2, transform.rotation);
 			yield return new WaitForSeconds(WaitTime);
 		}
 	}

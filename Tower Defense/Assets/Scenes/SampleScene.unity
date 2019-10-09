@@ -30345,7 +30345,7 @@ GameObject:
   - component: {fileID: 1999746541}
   - component: {fileID: 1999746539}
   m_Layer: 11
-  m_Name: Cylinder
+  m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30377,10 +30377,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f979ea0a57c741419b8abf59f4eb54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 2
-  Runner: 1
+  WaitTime: 1
+  Runner: 0
   Targets: []
-  newObject: {fileID: 0}
+  newObject: {fileID: 1422279988497064, guid: 65b0f3fe70e0bc64995227e6405ec954, type: 2}
 --- !u!136 &1999746541
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30444,7 +30444,7 @@ Transform:
   m_GameObject: {fileID: 1999746538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 1.05, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 0.97808, z: 1}
   m_Children:
   - {fileID: 490026577}
   m_Father: {fileID: 0}
