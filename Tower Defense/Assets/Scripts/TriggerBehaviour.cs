@@ -14,6 +14,7 @@ public class TriggerBehaviour : MonoBehaviour
 	private void OnTriggerEnter()
 	{
 		TriggerEnterAction.Invoke();
+		Debug.Log("triggered");
 	}
 	
 	private void OnTriggerStay()

@@ -8,6 +8,7 @@ public class BulletBehaviour : MonoBehaviour
 	public UnityEvent TriggerEnterAction;
 	public bool Runner;
 	public Transform StartLocation;
+	public float BulletSpeed;
 
 	public void Start()
 	{
@@ -35,6 +36,6 @@ public class BulletBehaviour : MonoBehaviour
 	public void MoveForward()
 	{
 		
-		transform.position = Vector3.Lerp(StartLocation.position, StartLocation.forward * 100, 1 * Time.deltaTime);
+		transform.position = Vector3.Lerp(StartLocation.position, StartLocation.forward * BulletSpeed, 1 * Time.deltaTime);
 	}
 }
