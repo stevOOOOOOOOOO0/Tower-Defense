@@ -7,7 +7,6 @@ public class BulletBehaviour : MonoBehaviour
 
 	public UnityEvent TriggerEnterAction;
 	public bool Runner;
-	public Transform StartLocation;
 	public float BulletSpeed;
 
 	public void Start()
@@ -18,24 +17,21 @@ public class BulletBehaviour : MonoBehaviour
 	// Use this for initialization
 	public IEnumerator OnStart ()
 	{
-		StartLocation = transform;
 		while (Runner)
 		{
 			MoveForward();
 			yield return new WaitForSeconds(0);
 		}
-		TriggerEnterAction.Invoke();
 	}
 	
 	// Update is called once per frame
-	private void OnTriggerEnter ()
+	private void OnTriggerEnter (Collider other)
 	{
-		//Runner = false;
+		Runner = false;
 	}
 
 	public void MoveForward()
 	{
-		
-		transform.position = Vector3.Lerp(StartLocation.position, StartLocation.forward * BulletSpeed, 1 * Time.deltaTime);
+		transform.position = Vector3.Lerp(transform.position, transform.forward * BulletSpeed, 1 * Time.deltaTime);
 	}
 }

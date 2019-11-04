@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,5 +21,11 @@ public class EnemyBehaviour : MonoBehaviour
 	public void ChangeSpeed()
 	{
 		Time.timeScale = PlaySpeed.Value;
+	}
+
+
+	private void OnTriggerEnter(Collider other)
+	{
+		Debug.Log("Hehe I'm in Danger");
 	}
 }

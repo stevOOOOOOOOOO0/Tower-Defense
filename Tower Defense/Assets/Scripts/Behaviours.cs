@@ -45,7 +45,7 @@ public class Behaviours : MonoBehaviour
 		yield return new WaitForSeconds(.15f);
 		while (Runner)
 		{
-			Instantiate(newObject, transform.forward * 2, transform.rotation);
+			Instantiate(newObject, transform.position + transform.forward, transform.rotation);
 			yield return new WaitForSeconds(WaitTime);
 		}
 	}
