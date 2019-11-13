@@ -26,6 +26,6 @@ public class EnemyBehaviour : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Hehe I'm in Danger");
+		
 	}
 }

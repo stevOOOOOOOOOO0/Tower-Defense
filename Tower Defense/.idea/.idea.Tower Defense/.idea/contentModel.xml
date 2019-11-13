@@ -25,6 +25,7 @@
         <e p="Scripts" t="Include">
           <e p="Behaviours.cs" t="Include" />
           <e p="BulletBehaviour.cs" t="Include" />
+          <e p="ClickBehaviour.cs" t="Include" />
           <e p="EnemyBehaviour.cs" t="Include" />
           <e p="FloatData.cs" t="Include" />
           <e p="GameAction.cs" t="Include" />
