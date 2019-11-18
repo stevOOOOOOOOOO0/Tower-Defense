@@ -28,6 +28,7 @@ public class BulletBehaviour : MonoBehaviour
 	private void OnTriggerEnter (Collider other)
 	{
 		Runner = false;
+		Debug.Log(other.gameObject.tag);
 	}
 
 	public void MoveForward()
