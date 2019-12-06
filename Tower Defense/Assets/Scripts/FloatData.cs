@@ -15,4 +15,9 @@ public class FloatData : ScriptableObject
 	{
 		Value = Value / 2;
 	}
+
+	public void AddValue(float FloatValue)
+	{
+		Value = Value + FloatValue;
+	}
 }
